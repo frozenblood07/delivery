@@ -9,7 +9,7 @@ routes.forEach((route) => {
         if(!routesMap.hasOwnProperty(routeBreakUp[1]))
             routesMap[routeBreakUp[1]] = {};
 
-        routesMap[routeBreakUp[1]][routeBreakUp[2]] = routeBreakUp[3]; //intented input routes map
+        routesMap[routeBreakUp[1]][routeBreakUp[2]] = parseInt(routeBreakUp[3]); //intented input routes map
     }else 
         console.error(`Invalid route input ${route}`);
 })
