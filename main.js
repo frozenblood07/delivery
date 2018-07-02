@@ -2,7 +2,6 @@
 const getArgs = () => {
     let arguments = process.argv;
     arguments.splice(0, 2);
-    console.log(arguments);
     return {
       instruction: arguments.shift(),
       parameters: arguments
@@ -12,11 +11,10 @@ const getArgs = () => {
   const instructions = require('./lib');
   
   const main = () => {
-    let args = getArgs();
-    let output = args.instruction !== undefined ? args.instruction in instructions ? instructions[args.instruction]("routes",args.parameters) : "Invalid instruction" : "No input provided";
-    console.log(args);
+    const args = getArgs();
+    const routes = require('./routes');
+    const output = args.instruction !== undefined ? args.instruction in instructions ? instructions[args.instruction](routes,args.parameters) : "Invalid instruction" : "No input provided";
     console.log(output);
-
   };
   
   main();
