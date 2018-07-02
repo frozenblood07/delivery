@@ -4,8 +4,12 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node_modules/jest/bin/jest.js"
   },
   "author": "Karan Tuteja <karan.tuteja26@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^20.0.4",
+    "child-process-promise": "^2.2.1"
+  }
 }
