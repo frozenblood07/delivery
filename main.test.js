@@ -33,3 +33,17 @@ test('Executing `main.js cost ADF` should respond with `No Such Route`', () => {
         return expect(result.stdout.trim('\n')).toEqual('No Such Route')
     }) 
 })
+
+test('Executing `main.js shortestPath ED` should respond with `9`', () => {  
+    return exec('node main.js shortestPath ED')
+    .then((result) => {
+        return expect(result.stdout.trim('\n')).toEqual('9')
+    }) 
+})
+
+test('Executing `main.js shortestPath EE` should respond with `6`', () => {  
+    return exec('node main.js shortestPath EE')
+    .then((result) => {
+        return expect(result.stdout.trim('\n')).toEqual('6')
+    }) 
+})
